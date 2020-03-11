@@ -18,6 +18,11 @@ public class Cooperativa {
 	
 	@Column
 	private String nombre;
+
+	@Column
+	private String informacion;
+	
+	private String direccion;
 	
 	public int getId() {
 		return id;
@@ -43,8 +48,6 @@ public class Cooperativa {
 		this.informacion = informacion;
 	}
 
-	@Column
-	private String informacion;
 
 
 }

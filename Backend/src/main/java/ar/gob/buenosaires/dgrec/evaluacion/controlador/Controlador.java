@@ -28,13 +28,13 @@ public class Controlador {
 	@Autowired
 	CooperativaService cooperativa;
 	
-	@PostMapping("/iniciar")
-	public Boolean getUsuarios(@RequestParam String user, @RequestParam String clave) {
+	@PostMapping("/iniciarSesion")
+	public Boolean iniciarSesion(@RequestParam String user, @RequestParam String clave) {
 		List<Usuario> lista = usuario.listar();
 		for(int i = 0; i < lista.size(); i++) {
 			try {
-			if(lista.get(i).getUsuario().equals(user))
-				return lista.get(i).getClave().contentEquals(clave);
+			if(lista.get(i).getUsuario() == user)
+				return lista.get(i).getClave().equals(clave);
 			}catch(Exception e) {
 				System.out.println("Error: " + e);
 			}
@@ -42,11 +42,10 @@ public class Controlador {
 		return false;
 	}
 	
-	@PostMapping("/traerCooperativas")
+	@PostMapping
 	public List<Cooperativa> getCooperativas(){
 		System.out.println("Comenzo a traer cooperativas");
 		return cooperativa.listar();
-		
 	}
 
 }

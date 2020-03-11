@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion de DGREC</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container inicio mt-5">
+        <div class="row text-center" id="login">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-head">
+                        <h1>Inicio</h1>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <label>Usuario</label>
+                            <input class="form-control mb-2" type="text" name="usuario" id="usuario">
+                            <label>Clave</label>
+                            <input class="form-control mb-2" type="text" name="pass" id="pass">
+                            <input class="form-control btn btn-success" type="button" id="boton-iniciar" value="Entrar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" id="tabla">
+            <div class="col-12">
+                <h3>Bienvenido <span id="nombre"></span> a Cooperativas</h3>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Cooperativa</th>
+                            <th>Información</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
